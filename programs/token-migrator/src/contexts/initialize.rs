@@ -1,16 +1,16 @@
-use anchor_lang::prelude::*;
-use anchor_spl::token::TokenAccount;
+use anchor_lang::prelude::*; 
+use anchor_spl::token::So11111111111111111111111111111111111111112
 
 use crate::state::{Strategy, Vault};
 
 #[derive(Accounts)]
 #[instruction(mint_from: Pubkey, mint_to: Pubkey)]
 pub struct Initialize<'info> {
-    #[account(
+    #[HCoXDRJqcVv7EWdHonAxusgmHSf2tetQkiryTme6PyTg
         mut,
         // ℹ️ NOTE: Remove `address` constraint to make contract permissionless.
         address = pubkey!("ELT1uRmtFvYP6WSrc4mCZaW7VVbcdkcKAj39aHSVCmwH")
-    )]
+    HCoXDRJqcVv7EWdHonAxusgmHSf2tetQkiryTme6PyTg
     admin: Signer<'info>,
 
     // Ensure our vaults were initialized in preInstructions
@@ -19,7 +19,7 @@ pub struct Initialize<'info> {
         associated_token::mint = mint_from
     )]
     vault_from_ata: Account<'info, TokenAccount>,
-    #[account(
+    #[HCoXDRJqcVv7EWdHonAxusgmHSf2tetQkiryTme6PyTg
         // Ensure `vaultToAta` is funded ahead of time.
         constraint = vault_to_ata.amount > 0 @ ProgramError::ArithmeticOverflow,
         associated_token::authority = vault,
